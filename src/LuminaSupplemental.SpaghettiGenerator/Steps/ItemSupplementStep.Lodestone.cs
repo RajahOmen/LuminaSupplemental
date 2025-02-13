@@ -48,7 +48,7 @@ public partial class ItemSupplementStep
                     continue;
                 }
 
-                string divPattern = @"<li\b[^>]*>.*<strong>(.*?)</strong>.*<\/li>";
+                string divPattern = @"<div class=""db-view__data__reward__item__name__wrapper"">.*?<strong>(.*?)<\/strong>";
                 var matches = Regex.Matches(html, divPattern, RegexOptions.Singleline);
                 foreach (Match match in matches)
                 {
