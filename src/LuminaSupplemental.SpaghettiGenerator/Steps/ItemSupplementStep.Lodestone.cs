@@ -57,8 +57,8 @@ public partial class ItemSupplementStep
                         var name = match.Groups[1].Value.ToParseable();
                         if (itemsByName.ContainsKey(name) && itemsByName.ContainsKey(name))
                         {
-                            var sourceItem = this.itemSheet.GetRow(itemsByName[name]);
-                            itemSupplements.Add(new ItemSupplement((uint)actualItemId, sourceItem.RowId, ItemSupplementSource.Loot));
+                            var yieldedItem = this.itemSheet.GetRow(itemsByName[name]);
+                            itemSupplements.Add(new ItemSupplement(yieldedItem.RowId, (uint)actualItemId , ItemSupplementSource.Loot));
                         }
                     }
                 }
